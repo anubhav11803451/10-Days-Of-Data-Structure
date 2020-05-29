@@ -11,7 +11,16 @@ class Stack():
     def get_stack(self): # To Fetch the items in stack list.
         return self.items
 
+    def is_empty(self): # To check is stack list is empty.
+        return self.items == []
+
+    def peek(self): # To Fetch the last item in stack list.
+        if not self.is_empty():
+            return self.items[-1]
+
 objectStack = Stack() # Object of the Stack Class.
+
+print(objectStack.is_empty()) 
 
 objectStack.push("Rat")
 objectStack.push("Cat")
@@ -24,7 +33,11 @@ print(objectStack.get_stack())
 
 objectStack.push("Hat")
 
+print(objectStack.is_empty())
+
 print(objectStack.get_stack())
+
+print(objectStack.peek())
 
 objectStack.pop()
 
