@@ -1,8 +1,8 @@
 class Node:
-    def __init__(self, value, link_node = None):
+    def __init__(self, value, link_node=None):
         #to initialize the object constructure is used.
-        self.value=value
-        self.link_node=link_node
+        self.value = value
+        self.link_node = link_node
 
     def get_value(self):
         return self.value
@@ -11,10 +11,11 @@ class Node:
         return self.link_node
 
     def set_next_node(self, link_node):
-        self.link_node=link_node
+        self.link_node = link_node
+
 
 class Stack(Node):
-    def __init__(self, size, limit = 1000):
+    def __init__(self, size, limit=1000):
         self.size = 0
         self.limit = limit
         self.top_item = None
@@ -49,7 +50,8 @@ class Stack(Node):
         else:
             print("Stack Empty")
 
-Pizza_Stack = Stack(4,5)
+
+Pizza_Stack = Stack(4, 5)
 
 print(Pizza_Stack.has_space())
 
