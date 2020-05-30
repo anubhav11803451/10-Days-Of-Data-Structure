@@ -28,5 +28,17 @@ class Stack(Node):
             self.set_link_node(self.top_item)
             self.top_item = value
             self.size += 1
+        else:
+            print("Out Of Space")
 
-    
+    def is_empty(self):
+        return self.size <= 0
+
+    def poo(self):
+        if not self.is_empty():
+            item_to_remove = self.top_item
+            top_item = self.get_link_node()
+            self.size -= 1
+            return item_to_remove
+        else:
+            print("Stack Empty")
