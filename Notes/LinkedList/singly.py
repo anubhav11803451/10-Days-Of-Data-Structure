@@ -8,7 +8,7 @@ class LinkedList:
     def __init__(self):
         self.head = None
 
-    def Print_list(self):
+    def print_list(self):
         cur_node = self.head
         while cur_node:
             print(cur_node.data)
@@ -23,3 +23,12 @@ class LinkedList:
         while last_node.next:
             last_node = last_node.next
             last_node.next = new_node
+
+Llist = LinkedList()
+
+Llist.append("A")
+Llist.append("B")
+Llist.append("C")
+Llist.append("D")
+
+Llist.print_list()
