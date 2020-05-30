@@ -25,7 +25,8 @@ class LinkedList:
         new_node.next_node = self.head_node
         self.head_node = new_node
 
-    def stringify_list()
+    def stringify_list():
+        
 
 my_Node = Node(44)
 
