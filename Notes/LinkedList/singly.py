@@ -75,6 +75,9 @@ Llist.append("A")
 Llist.append("B")
 Llist.append("C")
 Llist.append("D")
+
+Llist.delete_node_at_pos(0)
+
 # Llist.delete_node("B")
 # Llist.delete_node("E")
 # Llist.insert_after_node(Llist.head.next, "D")
