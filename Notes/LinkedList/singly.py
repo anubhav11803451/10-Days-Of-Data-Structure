@@ -28,6 +28,11 @@ class LinkedList:
         new_node.next = self.head
         self.head = new_node
 
+    def insert_after_node(self, prev_node, data):
+        if not prev_node:
+            print("Previous node does not exist.")
+            return
+
 Llist = LinkedList()
 
 Llist.append("A")
