@@ -32,4 +32,4 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        10-Days-Of-Data-Structure/Tasks/Day 2/pytest stack.py
+        pytest 10-Days-Of-Data-Structure/Tasks/Day 2/stack.py
