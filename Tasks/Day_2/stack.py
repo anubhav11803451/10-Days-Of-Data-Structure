@@ -43,12 +43,14 @@ class Stack(Node):
             return item_to_remove
         else:
             print("Stack Empty")
+            return
 
     def peek(self):
         if not self.is_empty():
             return self.get_value()
         else:
             print("Stack Empty")
+            return
 
 
 Pizza_Stack = Stack(4, 5)
