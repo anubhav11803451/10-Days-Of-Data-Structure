@@ -32,12 +32,15 @@ class LinkedList:
         if not prev_node:
             print("Previous node does not exist.")
             return
+        new_node = Node(data)
+        new_node.next = prev_node.next
+        prev_node.next = new_node
 
 Llist = LinkedList()
 
 Llist.append("A")
 Llist.append("B")
 Llist.append("C")
-Llist.append("D")
+Llist.insert_after_node(Llist.head.next, "D")
 
 Llist.print_list()
