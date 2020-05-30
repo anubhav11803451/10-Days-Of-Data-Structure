@@ -3,7 +3,6 @@ class Node:
         self.data = data
         self.next = None
 
-
 class LinkedList:
     def __init__(self):
         self.head = None
@@ -22,7 +21,12 @@ class LinkedList:
         last_node = self.head
         while last_node.next:
             last_node = last_node.next
-            last_node.next = new_node
+        last_node.next = new_node
+
+    def prepend(self, data):
+        new_node = Node(data)
+        new_node.next = self.head
+        self.head = new_node
 
 Llist = LinkedList()
 
