@@ -52,9 +52,13 @@ myNode = Node(44)
 
 print(myNode.get_value())
 
-L1 = LinkedList(5)
-L1.insert_beginning(70)
-L1.insert_beginning(5675)
-L1.insert_beginning(90)
+L1 = LinkedList(8)
+L1.insert_beginning(25)
+L1.insert_beginning(85)
+L1.insert_beginning(110)
+
+print(L1.stringify_list())
+
+L1.remove_node(85)
 
 print(L1.stringify_list())
