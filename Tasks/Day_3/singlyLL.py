@@ -27,24 +27,34 @@ class LinkedList:
 
     def stringify_list(self):
         string = ""
-        start = self.head_node
-        while start:
-            string += str(start.get_value())+"\n"
-            start = start.next_node
+        current_node = self.get_head_node()
+        while current_node:
+            if current_node.get_value() != None:
+                string += str(current_node.get_value()) + "\n"
+            current_node = current_node.get_next_node()
         return string
 
     def remove_node(self, value_to_remove):
-        current_node = self.head_node
-        if current_node == value_to_remove:
-            self.head_node = current_node.next_node
+        current_node = self.get_head_node()
+        if current_node.get_value() == value_to_remove:
+            self.head_node = current_node.get_next_node()
         else:
             while current_node:
-                if (current_node.get_next_node()).get_next_node() == value_to_remove:
-                    current_node = current_node.next_node.get_next_node()
-                    current_node.next_node = None
-                current_node = current_node.next_node
+                next_node = current_node.get_next_node()
+                if next_node.get_value() == value_to_remove:
+                    current_node.set_next_node(next_node.get_next_node())
+                    current_node = None
+                else:
+                    current_node = next_node
 
 
 myNode = Node(44)
 
 print(myNode.get_value())
+
+L1 = LinkedList(5)
+L1.insert_beginning(70)
+L1.insert_beginning(5675)
+L1.insert_beginning(90)
+
+print(L1.stringify_list())
