@@ -43,24 +43,24 @@ class CircularLinkedList:
     def remove(self, key):
         if self.head:
             if self.head.data == key:
-                cur = self.head 
+                cur = self.head
                 while cur.next != self.head:
-                    cur = cur.next 
+                    cur = cur.next
                 if self.head == self.head.next:
                     self.head = None
                 else:
                     cur.next = self.head.next
                     self.head = self.head.next
             else:
-                cur = self.head 
-                prev = None 
+                cur = self.head
+                prev = None
                 while cur.next != self.head:
-                    prev = cur 
+                    prev = cur
                     cur = cur.next
                     if cur.data == key:
-                        prev.next = cur.next 
+                        prev.next = cur.next
                         cur = cur.next
-    
+
     def __len__(self):
         cur = self.head
         count = 0
@@ -72,7 +72,7 @@ class CircularLinkedList:
         return count
 
     def split_list(self):
-        size = len(self)    
+        size = len(self)
 
         if size == 0:
             return None
@@ -89,7 +89,7 @@ class CircularLinkedList:
             count += 1
             prev = cur
             cur = cur.next
-        prev.next = self.head 
+        prev.next = self.head
 
         split_cllist = CircularLinkedList()
         while cur.next != self.head:
@@ -100,6 +100,7 @@ class CircularLinkedList:
         self.print_list()
         print("\n")
         split_cllist.print_list()
+
 
 CLlist = CircularLinkedList()
 
