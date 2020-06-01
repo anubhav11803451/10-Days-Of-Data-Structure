@@ -130,6 +130,9 @@ dllist.append(2)
 dllist.append(3)
 dllist.append(4)
 
+dllist.add_after_node(3,6)
+dllist.add_before_node(4,9)
+
 dllist.delete(1)
 dllist.delete(4)
 dllist.delete(3)
