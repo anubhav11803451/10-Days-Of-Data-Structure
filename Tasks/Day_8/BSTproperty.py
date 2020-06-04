@@ -9,20 +9,20 @@ class BST(object):
     def __init__(self, root):
         self.root = Node(root)
 
-    def insert(self, new_val):
-        self.insert_helper(self.root, new_val)
+    def insert(self, data):
+        self.insert_helper(self.root, data)
 
-    def insert_helper(self, current, new_val):
-        if current.data < new_val:
+    def insert_helper(self, current, data):
+        if current.data < data:
             if current.right:
-                self.insert_helper(current.right, new_val)
+                self.insert_helper(current.right, data)
             else:
-                current.right = Node(new_val)
+                current.right = Node(data)
         else:
             if current.left:
-                self.insert_helper(current.left, new_val)
+                self.insert_helper(current.left, data)
             else:
-                current.left = Node(new_val)
+                current.left = Node(data)
 
     def search(self, find_val):
         return self.search_helper(self.root, find_val)
@@ -60,19 +60,25 @@ bst.insert(1)
 bst.insert(25)
 bst.insert(9)
 bst.insert(13)
+print(bst.search(9),"\n")
+print(bst.search(14),"\n")
 
 tree = BST(10)
-tree.root = Node(1)
-tree.root.left = Node(-4)
-tree.root.right = Node(3)
-tree.root.left.left = Node(-5)
-tree.root.left.right = Node(0)
-tree.root.right.left = Node(2)
-tree.root.right.right = Node(7)
-tree.root.right.right.right = Node(-8)
+tree.root = Node(12)
+tree.root.left = Node(3)
+tree.root.right = Node(14)
+tree.root.left.left = Node(1)
+tree.root.left.right = Node(11)
+tree.root.right.left = Node(13)
+tree.root.right.right = Node(15)
+print(tree.is_bst_satisfied(),"\n")
 
-
-print(tree.is_bst_satisfied())
-
-print(bst.search(9))
-print(bst.search(14))
+tree1 = BST(10)
+tree1.root = Node(12)
+tree1.root.left = Node(3)
+tree1.root.right = Node(14)
+tree1.root.left.left = Node(1)
+tree1.root.left.right = Node(13)
+tree1.root.right.left = Node(11)
+tree1.root.right.right = Node(15)
+print(tree1.is_bst_satisfied(),"\n")
