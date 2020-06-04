@@ -5,8 +5,8 @@ class Node(object):
         self.right = None
 
 
-class BST(object):
-    def __init__(self, root):
+class BST():
+    def __init__(self, root = None):
         self.root = Node(root)
 
     def insert(self, data):
@@ -54,7 +54,7 @@ class BST(object):
         return helper(self.root)
 
 
-bst = BST(10)
+bst = BST()
 bst.insert(3)
 bst.insert(1)
 bst.insert(25)
@@ -63,7 +63,7 @@ bst.insert(13)
 print(bst.search(9),"\n")
 print(bst.search(14),"\n")
 
-tree = BST(10)
+tree = BST()
 tree.root = Node(12)
 tree.root.left = Node(3)
 tree.root.right = Node(14)
@@ -73,7 +73,7 @@ tree.root.right.left = Node(13)
 tree.root.right.right = Node(15)
 print(tree.is_bst_satisfied(),"\n")
 
-tree1 = BST(10)
+tree1 = BST()
 tree1.root = Node(12)
 tree1.root.left = Node(3)
 tree1.root.right = Node(14)
